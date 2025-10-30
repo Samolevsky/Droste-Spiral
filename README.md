@@ -264,9 +264,6 @@ Click the sun/moon icon in the top-right corner to switch between light and dark
 
 Created by [Samolevsky.com](https://samolevsky.com)
 
-## License
-
-MIT License - Feel free to use, modify, and distribute this application.
 
 ## Support
 
