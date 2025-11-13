@@ -2,8 +2,6 @@
 
 A powerful web-based image editor that creates mesmerizing Droste spiral effects using WebGL. Transform any image into an infinite recursive spiral with real-time preview and extensive customization options.
 
-![Droste Spiral Effect](https://img.shields.io/badge/WebGL-Powered-blue) ![License](https://img.shields.io/badge/license-MIT-green)
-
 ## What is the Droste Effect?
 
 The Droste effect is a recursive visual phenomenon where an image appears within itself in a continuous loop. Named after a Dutch cocoa brand's packaging, this effect creates an infinite spiral that draws the viewer into a hypnotic, self-similar pattern. This application takes the classic Droste effect and adds dynamic spiral transformations for stunning visual results.
@@ -16,20 +14,19 @@ The Droste effect is a recursive visual phenomenon where an image appears within
 - **Customizable Repetition** - Control inner recursion levels and outer repetitions
 - **Spiral Effect Toggle** - Switch between classic Droste and spiral variations
 - **Animation System** - Animate spiral rotation with adjustable speed and direction
+- **Color Adjustment Tools** - Modify hue, saturation, lightness, contrast, and invert colors
+- **Circular Mask** - Apply circular masking with adjustable feathering
 - **Boundary Visualization** - Optional boundary overlay with custom colors and thickness
 - **High-Resolution Export** - Download PNG images up to 8192×8192 pixels
 - **GIF Animation Export** - Create animated GIFs of your spiral effects
 - **Dark/Light Theme** - Comfortable viewing in any lighting condition
 - **Canvas Zoom & Pan** - Navigate and inspect your creation with precision
+- **Interactive About Dialog** - Learn about the app, access EULA, and discover more tools
 - **Keyboard Shortcuts** - Efficient workflow with hotkeys
 
 ## Getting Started
 
-### Installation
 
-1. Clone or download this repository
-2. Open `index.html` in a modern web browser (Chrome, Firefox, Safari, or Edge)
-3. No build process or dependencies required!
 
 ### Quick Start
 
@@ -115,6 +112,16 @@ When enabled, applies the characteristic spiral transformation. Disable for a cl
 #### Reverse Order
 Reverses the rendering order of layers, changing which layers appear on top. Useful for creating different depth effects.
 
+#### Circular Mask
+Applies a circular mask to the image with smooth feathering at the edges.
+
+**Feather:** Adjust the softness of the mask edge from 0 to 0.5
+
+**Usage:**
+- Create vignette effects
+- Focus attention on the center
+- Blend spirals into backgrounds
+
 #### Show Boundary
 Displays a colored border around the image boundaries, helpful for:
 - Visualizing the transformation area
@@ -123,6 +130,25 @@ Displays a colored border around the image boundaries, helpful for:
 
 **Boundary Color:** Click the color swatch or enter a hex code  
 **Boundary Thickness:** Adjust from 1 to 100 pixels
+
+### Color Adjustment
+
+Fine-tune the colors of your spiral effect with professional-grade controls:
+
+#### Hue (-180° to 180°)
+Shifts all colors around the color wheel. Use for creative color grading or to match specific color schemes.
+
+#### Saturation (-100% to 100%)
+Adjusts color intensity. Negative values desaturate (toward grayscale), positive values increase vibrancy.
+
+#### Lightness (-100% to 100%)
+Controls overall brightness. Negative values darken, positive values lighten the image.
+
+#### Contrast (-100% to 100%)
+Adjusts the difference between light and dark areas. Increase for more dramatic effects, decrease for softer looks.
+
+#### Invert Image
+Reverses all colors to their opposites, creating negative-style effects.
 
 ### Animation
 
@@ -186,6 +212,19 @@ Click and drag on the canvas to pan around when zoomed in.
 ### Theme Toggle
 Click the sun/moon icon in the top-right corner to switch between light and dark themes.
 
+### About Dialog
+Click the app title "Droste Spiral" in the sidebar header to open an interactive dialog containing:
+
+- **App Description** - Comprehensive overview of features and capabilities
+- **Discover More Design Tools** - Direct link to explore additional creative tools
+- **End User License Agreement** - Full legal terms and conditions (expandable section)
+
+The dialog includes:
+- Smooth fade-in animation
+- Keyboard navigation support (ESC to close, Tab to navigate)
+- Click outside to close
+- Focus trap for accessibility
+
 ## Keyboard Shortcuts
 
 | Shortcut | Action |
@@ -194,7 +233,8 @@ Click the sun/moon icon in the top-right corner to switch between light and dark
 | `+` or `=` | Zoom in |
 | `-` | Zoom out |
 | `0` | Reset zoom to 100% |
-| `Space` | Play/Pause animation |
+| `ESC` | Close about dialog |
+| Click app title | Open about dialog |
 
 ## Tips & Tricks
 
@@ -220,13 +260,18 @@ Click the sun/moon icon in the top-right corner to switch between light and dark
 - **Nature:** Flowers and spirals create organic, fractal-like compositions
 - **Text:** Circular text arrangements create interesting typographic spirals
 - **Abstract:** Combine high rotation angles with asymmetric offsets for chaotic beauty
+- **Color Grading:** Use hue shift and saturation adjustments for unique color palettes
+- **Vignettes:** Apply circular mask with high feather for professional photo effects
 
 ## Technical Details
 
 - **Rendering Engine:** WebGL with custom fragment shaders
 - **Effect Algorithm:** Based on complex logarithmic transformations
+- **Color Processing:** Real-time HSL color space transformations
 - **Animation:** RequestAnimationFrame for smooth 60 FPS playback
 - **GIF Export:** CCapture.js library for frame capture and encoding
+- **UI Framework:** Vanilla JavaScript with CSS custom properties for theming
+- **Accessibility:** WCAG compliant with keyboard navigation and ARIA labels
 - **Browser Compatibility:** Modern browsers with WebGL support (Chrome 56+, Firefox 52+, Safari 11+, Edge 79+)
 
 ## Browser Requirements
@@ -263,7 +308,6 @@ Click the sun/moon icon in the top-right corner to switch between light and dark
 ## Credits
 
 Created by [Samolevsky.com](https://samolevsky.com)
-
 
 ## Support
 
